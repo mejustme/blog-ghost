@@ -9,12 +9,11 @@ b-cov
 
 npm-debug.log
 
-/node_modules/*
-!/node_modules/sqlite3/
+node_modules/
 
-#!node_modules/sqlite3/无效
+!/node_modules/sqlite3
+!node_modules/sqlite3
 
-bower_components
 
 .idea/*
 
