@@ -10,6 +10,7 @@ b-cov
 npm-debug.log
 
 node_modules/
+!node_modules/sqlite3
 
 .idea/*
 
