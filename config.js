@@ -35,7 +35,7 @@ config = {
          },*/
 
         server: {
-            host: '0.0.0.0',
+            host: '',
             // port: '2368',
             port: '80'
         },
