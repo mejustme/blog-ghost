@@ -1,0 +1,132 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! This bellow code is for loading header aria}}
+{{> "header"}}
+
+{{#post}}
+
+<!--Content Area    
+================================================-->
+<div id="content" class="site-content single-post-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div id="primary"  class="content-area">
+                    <main class="site-main" id="main">
+                       
+                        <!--single post page top-->
+                        <div class="s-post-page-top">
+                            <article class="post hentry">
+                                {{#if image}}                            
+                                    <figure class="post-thumb">
+                                        <img src="{{image}}" alt="{{title}}">
+                                    </figure> <!-- /.post-thumb --> 
+                                {{/if}}                              
+                                <div class="post-details">
+                                    <h2 class="entry-title">{{title}}</h2><!--/.entry title-->
+                                    <div class="single-post-entry-meta">
+                                        <div class="entry-meta-single">
+                                            {{#if tags}} 
+                                            <span class="cat-links">
+                                                {{tags}}
+                                            </span>  
+                                            {{/if}}                                           
+
+                                            <span class="entry-share">
+                                                {{author}}
+                                            </span>
+                                        </div><!--/.meta--> 
+                                    </div> <!-- /.single-post-entry-meta -->
+
+                                    <div class="single-post-date">
+                                        <div class="rotate">
+                                            <div class="entry-meta-single">
+                                                <span class="entry-date"><i class="fa fa-clock-o"></i>{{date format="DD MMMM YYYY"}}</a></span> 
+                                            </div>  
+                                        </div><!--/.meta-->
+                                    </div> 
+
+                                    <div class="entry-content">
+                                        {{content}}
+                                        <div class="single-post-share">
+                                            <div class="rotate">
+                                                <div class="share-button">  
+                                                    <script type="text/javascript">
+                                                        function petty_PopupWindow(url, title, w, h) {
+                                                            var left = (screen.width / 2) - (w / 2);
+                                                            var top = (screen.height / 2) - (h / 2);
+                                                            return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+                                                        }
+                                                    </script>
+                                                    <span>Share</span> 
+                                                    <!-- facebook share -->
+                                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute='true'}}" onclick="petty_PopupWindow(this.href, 'facebook-share', 580, 400); return false;"><span class="fa fa-facebook"></span></a>
+
+                                                    <!-- twitter share -->
+                                                    <a href="https://twitter.com/home?status={{url absolute='true'}}" onclick="petty_PopupWindow(this.href, 'facebook-share', 580, 400); return false;"><span class="fa fa-twitter"></span></a>
+
+                                                    <!-- google plus share -->
+                                                    <a href="https://plus.google.com/share?url={{url absolute='true'}}" onclick="petty_PopupWindow(this.href, 'google-plus-share', 550,530); return false;"><span class="fa fa-google-plus"></span></a>
+
+                                                    <!-- pinterest share -->
+                                                    <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><span class="fa fa-pinterest-p"></span></a>
+
+                                                    <!-- linkedin share -->
+                                                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute='true'}}" onclick="petty_PopupWindow(this.href, 'linkedin-share', 550,530); return false;"><span class="fa fa-linkedin"></span></a>    
+                                                </div><!-- /.share-button -->
+                                            </div>
+                                        </div>
+                                    </div><!--/.entry content-->
+                                </div><!--/.post details-->
+                            </article>       
+                        </div><!--/.single post page top-->
+                            
+                        <!-- post-navigation  -->
+                        <nav class="post-navigation clearfix">
+                            {{#next_post}}
+                            <div class="post-previous">
+                                <a href="{{url}}" rel="prev"> 
+                                    <i class="fa fa-angle-double-left"></i>      
+                                    <span>Newer Posts</span>
+                                </a>
+                            </div>
+                            {{/next_post}} 
+                            {{#prev_post}}
+                            <div class="post-next">
+                                <a href="{{url}}" rel="prev">                                        
+                                    <span>Older Posts</span>
+                                    <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </div>
+                            {{/prev_post}}      
+                        </nav> <!-- /.post-navigation -->
+                            
+                        <!-- author-info -->                            
+                        {{! This code is for include author info }}
+                        {{> "author-profile"}}
+                            
+
+                            <!--related post-->
+                            <div class="related-post clearfix">
+                                <div class="heading-title">
+                                    <h3 class="related-post-title">
+                                        <span>You maight also like</span>
+                                    </h3>
+                                </div>
+                                <div class="related-post-list clearfix" id="related-post-wrap"></div>    
+                            </div> <!--/.related-post-->
+
+                            <!-- Comment-Area -->
+                            {{! Code for Disqus Comment}}
+                            {{> "comments-disqus"}}
+
+                        </div><!--/.single post page bottom-->
+                    </main> <!-- #main -->
+                </div>
+            </div>      
+        </div> <!--/.row-->
+    </div> <!--/.container-->
+</div> <!--/.single post page-->
+
+{{/post}}

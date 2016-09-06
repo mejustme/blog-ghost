@@ -1,0 +1,48 @@
+.modal-dialog {
+    margin: 70px auto;
+    .modal-content {
+        .modal-header {
+            padding-left: 40px;
+            border-bottom: 0px;
+            h4 {
+                font-family: $font__body;
+                font-weight: bold;
+                letter-spacing: 0.025em;
+                text-transform: capitalize;
+                font-size: 18px;
+            }
+        }
+        .newsletter {
+            margin: 0 auto;
+            .form-control {
+                font-size: 13px;
+                font-family: $font__spcial;
+                height: 45px;
+                border-radius: 0px;
+                &:focus {
+                    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0) inset, 0 0 0px rgba(0, 0, 0, 0);
+                    border-color: $hover__color-two !important;
+                }
+            }
+            .btn.btn-default {
+                border-radius: 0;
+                font-size: 13px;
+                padding: 13px 12px;
+                height: 45px;
+                font-family: $font__spcial;
+            }
+        }
+    }
+}
+.modal-dialog {
+    .modal-content .modal-header {
+        h4 {
+            color: $color__heading-two;
+        }
+        .newsletter .form-control {
+            &:focus {
+                border-color: #66afe9;
+            }
+        }
+    }
+}

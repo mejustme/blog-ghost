@@ -1,0 +1,76 @@
+::-moz-selection {
+  background: #9bc6b2;
+}
+
+::selection {
+  background: #9bc6b2;
+}
+
+/* link color */
+a:hover, a:focus, a:active {
+  color: #9bc6b2;
+}
+
+.site-header #header-top .header-search .btn-default:hover {
+  color: #9bc6b2;
+}
+
+.menu-list li:hover {
+  color: #9bc6b2;
+}
+.menu-list li a.active {
+  color: #9bc6b2;
+}
+.menu-list li .menu-submenu > li:hover > a,
+.menu-list li .menu-submenu > li a.active > a {
+  color: #9bc6b2;
+}
+
+.featuare-full-width .owl-carousel .owl-item .item:hover .post-content,
+.featuare-center .owl-carousel .owl-item .item:hover .post-content {
+  background: rgba(155, 198, 178, 0.75) none repeat scroll 0 0;
+}
+
+/*----------- layout two style --------------*/
+.layout-five .single-row-col .post-media .rotate .cat-links a:hover {
+  color: #9bc6b2 !important;
+}
+
+.contact-page .contact-details .icon-area {
+  border-color: #9bc6b2 !important;
+}
+
+.error-page .error-page-list .error-search .btn-search:hover i {
+  color: #9bc6b2 !important;
+}
+.error-page .error-page-list .link-home a:hover {
+  color: #9bc6b2;
+}
+
+/*----------- single post page --------------*/
+.author-info #author-details .post-count .authors-social a:hover {
+  color: #9bc6b2;
+}
+
+/*---------Post Navaigation----------*/
+.post-navigation a:hover {
+  color: #9bc6b2;
+}
+
+/*---------Related POst----------*/
+.related-post .post-body .cat-links a:hover {
+  color: #9bc6b2;
+}
+
+/*----------- hover color--------------*/
+.rotate:hover a, .social-link a:hover i, .scroll-top a:hover, .entry-meta span a:hover, .post-text h3:hover a, .more-link:hover, .follow-link a:hover {
+  color: #9bc6b2 !important;
+}
+
+.btn.btn-default:hover {
+  background: #9bc6b2;
+}
+
+.post-readmore > p:hover a, .paging-navigation li:hover a {
+  color: #9bc6b2;
+}

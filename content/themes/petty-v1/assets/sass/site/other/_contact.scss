@@ -1,0 +1,168 @@
+.contact-page {
+    padding: 50px 0 85px;
+    .gmaps-area #gmaps {
+        height: 515px;
+    }
+    .contact-details {
+        overflow: hidden;
+        margin: 112px 0 0;
+        .contact-details-list {
+            .box {
+                margin-left: 56px;
+                position: relative;
+                margin-bottom: 40px;
+                &:before {
+                    content: "";
+                    height: calc(100% - 20px);
+                    left: 0;
+                    position: absolute;
+                    top: 13px;
+                    width: 1px;
+                }
+                &:after {
+                    content: "";
+                    height: 1px;
+                    left: 0;
+                    position: absolute;
+                    top: 13px;
+                    width: 25px;
+                }
+                .entry-title {
+                    padding: 0 0 18px 43px;
+                    font-size: 18px;
+                    text-transform: capitalize;
+                    font-weight: bold;                
+                }
+                .icon-area {
+                    display: table;
+                    height: 80px;
+                    text-align: center;
+                    width: 80px;
+                    margin: 0 0 21px 30px;
+                    i {
+                        display: table-cell;
+                        font-size: 30px;
+                        vertical-align: middle;
+                    }
+                }
+
+                .details {
+                    padding-left: 13px;
+                    &:before {
+                        left: -3px;
+                    }
+                }
+            }
+        }
+        #contact-form-wrap {
+            margin-top: 80px;
+        }
+    }
+    .padding-left {
+        @media only screen and (min-width) {
+            padding-left: 0.5em;
+        }
+    }
+    .padding-right {
+        @media only screen and (min-width) {
+            padding-right: 0.5em;
+        }
+    }
+    .padding-left-right {
+        @media only screen and (min-width) {
+            padding: 0 0.5em;
+        }
+    }
+    .contact-respond {
+        margin-top: 30px;
+        p {
+            margin-bottom: 1em;
+        }
+        .form-submit {
+            margin-bottom: 0;
+        }
+        .form-controller {
+            border-bottom: 1px solid #e1e1e1;
+            padding: 15px;
+            width: 100%;
+        }
+        #submit {
+            background: transparent;
+            border: 1px solid #e1e1e1;
+            color: inherit;
+            display: table;
+            font-family: $font__spcial;
+            font-size: 13px;
+            letter-spacing: 0.045em;
+            margin: 15px auto auto;
+            &:hover {
+                color: $color__white;
+                background: #000;
+            }
+        }
+    }
+    #name,
+    #email,
+    #subject {
+        height: 45px;
+    }
+    span.wpcf7-not-valid-tip {
+        color: #df2626;
+        display: block;
+        font-size: 0.8em;
+        margin-bottom: -10px;
+        margin-left: 4px;
+        margin-top: 3px;
+    }
+    div.wpcf7-validation-errors {
+        border: 1px solid #efdf35;
+        color: #df2626;
+    }
+    div.wpcf7-mail-sent-ng {
+        border: 1px solid #df2626;
+    } 
+    div.wpcf7-response-output {
+        padding: 0.4em 1em;
+        margin: 0;
+    }
+    .wpcf7-mail-sent-ok {
+        border-width: 1px;
+    }
+}
+.contact-page {
+    .gmaps-area #gmaps {
+        background: #E5E3DF;
+    }
+    .contact-details {
+        .box {
+            &:before {
+                background-color: $color__border-two;
+            }
+            &:after {
+                background-color: $color__border-two;
+            }
+            .icon-area {
+                border: 6px solid #95cac5;
+            }
+        }
+    }
+}
+
+.contact-page {
+    .gmaps-area #gmaps {
+        background: #E5E3DF;
+    }
+    .contact-details {
+        .box {
+            &:before {
+                background-color: $color__border-two;
+            }
+            &:after {
+                background-color: $color__border-two;
+            }
+            .icon-area {
+                border: 6px solid;
+            }
+        }
+    }
+}

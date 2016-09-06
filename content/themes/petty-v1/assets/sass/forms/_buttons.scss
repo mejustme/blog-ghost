@@ -1,0 +1,68 @@
+/*-----------search submit btn--------------*/
+.header-search {            
+    #submit-btn {
+        border: 0 none;        
+        padding: 7px 0;
+    }
+}
+
+.btn:active:focus, .btn:focus {
+    outline: 0px;
+}
+
+/*-----------post readmore--------------*/
+.post-readmore {
+    margin-bottom: 0;
+    position: relative;
+    &:after {
+        background-color: $details__border_bottom;
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: 54%;
+        z-index: -1;
+        left: 0;
+    }
+    p {                       
+        margin-bottom: 0px !important;
+        i {
+            vertical-align: middle;
+        }
+    }
+    
+}
+.more-link {
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-right: 8px; 
+    color: $color__more-link;
+    i {
+        vertical-align: middle;
+    }
+}
+
+.btn.btn-default:hover {
+    color: $color__white;
+}
+
+/*-----------submit btn--------------*/
+#submit {
+    background-color: #fff;
+    border: 1px solid $details__border_bottom;
+    font-size: 13px;
+    padding: 6px 29px;
+    text-transform: capitalize;
+    font-family: $font__spcial;
+    color: #5f6060;
+    -webkit-transition: all 0.35s ease 0s;
+            transition: all 0.35s ease 0s;
+    &:hover {
+        background-color: $color__mainmenu_bg;
+        color: $hover__color-two;
+    }
+}
+button {
+    &:focus {
+        outline: none;
+    }
+}

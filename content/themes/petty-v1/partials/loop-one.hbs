@@ -1,0 +1,49 @@
+<article class="{{post_class}} hentry">
+    <div class="post-media">
+        <div class="row">
+            <div class="col-md-5 col-sm-6">
+                <div class="post-thumb-content">
+                    <div class="entry-meta">
+                        <span class="entry-date">
+                            <i class="fa fa-clock-o"></i> {{date format="DD MMMM YYYY"}}
+                        </span>
+                    </div><!--/.meta-->
+                    <figure class="post-thumb"> 
+                        {{#if image}}
+                            <a href="{{url}}">
+                                <div class="post-thumb-image" style="background-image: url({{image}});"></div>
+                            </a>
+                        {{else}}
+                            <a href="{{url}}">
+                                <div class="post-thumb-image" style="background-image: url(/assets/images/no-thumb/layout-one.png);"></div>
+                            </a>
+                        {{/if}}  
+                    </figure><!--/.post thumb-->
+                    {{#if tags}} 
+                    <div class="rotate">
+                        <span class="cat-links">
+                            {{tags separator="" limit="1"}}
+                        </span>
+                    </div><!--/.rotate-->
+                    {{/if}}
+                </div><!--/.post thumb part-->
+            </div><!--/.col-md-5--> 
+            <div class="col-md-7 col-sm-6">
+                <div class="post-details">
+                    <h2 class="entry-title">
+                        <a href="{{url}}">{{title}}</a>
+                    </h2><!--entry title-->
+                    <div class="entry-content">
+                        {{content words="50"}}
+                        <div class="post-readmore">
+                            <p>
+                                <a class="more-link" href="{{url}}">Continue Reading</a>
+                                <i class="fa fa-long-arrow-right"></i>
+                            </p>
+                        </div> <!--post readmore--> 
+                    </div><!--entry content-->
+                </div><!--post details-->
+            </div>
+        </div><!--/.row--> 
+    </div><!--/.post media-->
+</article><!--/.post-->

@@ -1,0 +1,36 @@
+.rotate {
+    position: absolute; 
+    top: 0;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        background-color: $color__border-two;
+    }
+    .cat-links {
+        font-size: 1.125em;        
+        position: absolute;
+        -webkit-transform-origin: left center 0;
+        -ms-transform-origin: left center 0;
+            transform-origin: left center 0;
+        white-space: nowrap;
+        a {
+            padding: 0 0 0 10px;
+            text-transform: capitalize;
+            color: $color__rotate-text;
+        }
+    }
+}
+.rotate-text {
+    position: relative; 
+    font-size: 1.125em;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    -webkit-transform-origin: left center 0;
+    -ms-transform-origin: left center 0;
+        transform-origin: left center 0;
+    a {
+        text-transform: capitalize;
+    }
+}

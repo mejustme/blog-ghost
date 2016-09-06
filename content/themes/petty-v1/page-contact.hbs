@@ -1,0 +1,104 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! This bellow code is for loading header aria}}
+{{> "header"}}
+
+{{! This code to show Post in single page }}
+{{#post}}
+
+<!--Content Area    
+================================================-->
+<div class="site-content contact-page" id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="section-title">
+                    <h2>{{title}}</h2>
+                </div><!--/.section-title -->  
+                
+                <!-- Maps Area -->
+                <div class="gmaps-area">
+                    <div id="gmaps"></div>                                   
+                </div> <!-- /.gmaps-area -->
+                
+                <!-- Contact Details -->
+                <div class="contact-details">
+                    <div class="row">
+                        <div class="contact-details-list">
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="phone-area box">
+                                    <h4 class="entry-title">call us</h4>
+                                    <div class="icon-area">    
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <div class="details radius-before"><span></span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="email-area box">                                    
+                                    <h4 class="entry-title">email</h4>
+                                    <div class="icon-area">    
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <div class="details radius-before"><span></span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="web-area box">
+                                    <h4 class="entry-title">web</h4>
+                                    <div class="icon-area">    
+                                        <i class="fa fa-globe"></i>
+                                    </div>
+                                    <div class="details radius-before"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contact-form-wrap" class="row">
+                        <div class="col-md-12">
+                            <div id="respond" class="contact-respond">                            
+                                <form name="contactForm" id='contact_form' method="post">
+                                    <div class="row">
+                                        <div class="comment-input-full-width">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p class="single-field">
+                                                    <input type="text" name="name" id="name" class="form-controller" aria-required="true" placeholder="Name*">
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p class="single-field">
+                                                    <input type="text" name="email" id="email-comments" class="form-controller" aria-required="true" placeholder="Email*">
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <p class="single-field">
+                                                <input type="text" name="url" id="url" class="form-controller" aria-required="true" placeholder="Website*">
+                                            </p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <p class="single-field">
+                                                <textarea name="message" id="message" class="form-controller" aria-required="true" rows="8" cols="45" placeholder="Write a Comment...."></textarea>
+                                            </p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <p class="form-submit">
+                                                <input type="submit" value="submit" id="submit" name="submit">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </form>        
+
+                            </div><!-- #respond --> 
+                        </div> <!-- /.col-md-12 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.contact-details -->
+            </div> <!-- /.col-md-10 -->
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+</div>
+
+<script src="//maps.google.com/maps/api/js?key=AIzaSyA3c2J0w0-y_fzc6KDFRuM8c2OTROWo1sU"></script><!-- gmaps -->
+<script src="/assets/js/gmaps.js"></script> <!-- Plugin JS -->
+{{/post}}

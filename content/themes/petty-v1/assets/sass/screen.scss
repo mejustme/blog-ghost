@@ -1,0 +1,126 @@
+/*
+Theme Name: Petty
+Theme URI: http://www.petty.softhopper.net
+Author: SoftHopper
+Author URI: http://www.softhopper.net
+Description: It\' s a blog Wordpress Theme. Which is a unique feature and user competitive feature.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: petty
+Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images,  post-formats
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Petty is based on Underscores http://underscores.me/, (C) 2012-2015 Automatic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Typography (With All Title)
+# Elements
+	## Rotate, Table
+# Forms
+# Navigation
+	## Mopmenu
+	## Mainmenu
+	## paging navigation
+	## Navigation responsive
+		### Mobile CSS
+		### Pagination responsive
+# Site
+    ## Other
+        ### 404 page
+        ### About page
+        ### contact page
+    ## Primary
+        ### Post and Pages (Respond, Meta, Post, Radius)
+    ## Secondary
+        ### Modal
+        ### Slider (With Responsive)
+    ## Site Responsive
+#layouts
+	## Header Content
+		### Site Header (Header Top, Header Middle, Header Bottom)
+	## Featured Content
+        ### Full width Featured
+        ### Center Featured
+        ### Header Featured
+        ### Responsive All featured
+	## Main Content
+		### Hover
+		### Instafeed
+		### Slash
+		### Layout (one then eight)
+		### Single Post Page
+		### Post Navaigation
+		### Related Post 
+		### Comments 
+	## Footer Content
+		### Footer Top
+            #### widget
+		### Scroll Top
+        ### Footer Responsive
+	## Layout Responsive
+		### Header Responsive
+		### Content Area Responsive
+		### Post author-info Responsive		
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+
+/*--------------------------------------------------------------
+# Element
+--------------------------------------------------------------*/
+@import "element/elements";
+
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+
+/*--------------------------------------------------------------
+# navigation
+--------------------------------------------------------------*/
+@import "navigation/navigations";
+
+
+/*--------------------------------------------------------------
+# site
+--------------------------------------------------------------*/
+@import "site/site";
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+
+/*--------------------------------------------------------------
+# layouts
+--------------------------------------------------------------*/
+@import "layout/layouts";
+
+
+/*--------------------------------------------------------------
+#Media
+--------------------------------------------------------------*/
+@import "media/media";

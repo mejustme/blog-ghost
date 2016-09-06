@@ -1,0 +1,102 @@
+/*----------- 404 error page --------------*/
+.error-page {
+    padding: 38px 0 116px;
+    [class^="col-md-"] {
+        padding: 0;
+    }
+    .error-page-content {
+        width: 390px;
+        margin: 0 auto;
+        position: relative;
+        &:before {
+            content: "";
+            height: 200px;
+            position: absolute;
+            top: 12.3em;
+            width: 1px;
+        }
+        &:after {
+            content: "";
+            height: 1px;
+            position: absolute;
+            top: 196px;
+            width: 25px;
+        }
+    }
+    .error-page-list {
+        width: 300px;
+        margin: 0 auto;
+        .error-image {
+            margin-bottom: 103px;
+        }
+        .error-search {
+            width: 100%;
+            margin-bottom: 72px;  
+            &:before {
+                left: -48px;
+            }
+            .form-control {
+                font-size: 16px;
+                padding: 15px 18px;
+                width: 230px;                
+                border: 0px solid !important;
+                height: 54px;
+                border-radius: 0px;
+                box-shadow: 0 0px 0px rgba(0, 0, 0, 0) inset;
+                &:focus {
+                    border-color: #66afe9;
+                    box-shadow: 0 0px 0px rgba(0, 0, 0, 0) inset, 0 0 0px rgba(102, 175, 233, 0);
+                }
+            }
+            .btn-default {
+                border-radius: 0 !important;
+                padding: 7px 12px;
+                -webkit-transition: all 0.35s ease 0s;
+                transition: all 0.35s ease 0s;
+                border: 10px solid;
+                i {
+                    -webkit-transition: all 0.35s ease 0s;
+                    transition: all 0.35s ease 0s;
+                }
+            }
+        }
+        .link-home {
+            color: #515151;
+            font-size: 14px;
+            text-transform: capitalize;
+            font-weight: 700;
+            &:before {
+                left: -48px;
+            }
+            a {
+                transform: all 0.25s ease 0s;
+            }            
+        }
+    }
+}
+.error-page {
+    .error-page-content {
+        &:before {
+            background-color: $color__border-two;
+        }
+        &:after {
+            background-color: $color__border-two;
+        }
+    }
+    .error-page-list {
+        .error-search {
+            .form-control {
+                background-color: #f5f5f5;
+                color: #b0b0b0;
+            }
+            .btn-default {
+                background-color: $color__white;
+                border-color: #ebebeb;
+            }
+        }
+        .link-home {
+            color: #515151;    
+        }
+    }
+}
+

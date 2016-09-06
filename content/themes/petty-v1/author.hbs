@@ -1,0 +1,74 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! This bellow code is for loading header aria}}
+{{> "header"}}
+
+
+<!--Content Area    
+================================================-->
+<div id="content" class="author-page site-content">
+    <div id="post-container" class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                {{! This code is for include author info }}
+                {{> "author-profile"}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="post-layout-column col-md-10 col-md-offset-1">
+                <div id="primary" class="layout-one">
+                    <main id="main" class="site-main">
+                    {{#foreach posts}}
+                        {{> "loop-one"}}
+                    {{/foreach}} 
+                                                                       
+                    </main><!--/.site main-->
+                </div><!--/.layout one-->
+            </div><!--/.col-md-10-->
+            
+            {{! Previous/next page links - displayed on every page }}
+            {{pagination}}
+                        
+        </div><!--/.row-->
+    </div><!--/.container-->
+</div><!--/.site contant-->
+
+<script>
+    
+    if (typeof( author_post_style ) != "undefined") {
+        var Author_Post_layOut = author_post_style ;
+    } else {
+        var Author_Post_layOut = 1;
+    }
+
+    if ( Author_Post_layOut == 2 ) {
+
+        $('.author-page #primary').removeClass('layout-one').addClass('layout-two');
+        $('.author-page .post-layout-column').removeClass('col-md-10 col-md-offset-1').addClass('col-md-12');
+
+    } else if ( Author_Post_layOut == 3 ) {
+
+        $('.author-page #post-container').removeClass('container').addClass('container-fluid');
+        $('.author-page #primary').removeClass('layout-one').addClass('layout-four');
+        $('.author-page .post-layout-column').removeClass('col-md-10 col-md-offset-1').addClass('col-md-12');
+        $(".author-page .post-style-three:nth-child(even) .style-three-image").addClass("col-md-push-5");
+        $(".author-page .post-style-three:nth-child(even) .style-three-post").addClass("col-md-pull-7");
+
+    } else if ( Author_Post_layOut == 4 ) {
+        
+        $('.author-page #primary').removeClass('layout-one').addClass('layout-seven');
+        $(".author-page .post-style-four:nth-child(odd) .style-four-image").addClass("col-md-push-6");
+        $(".author-page .post-style-four:nth-child(odd) .style-four-post").addClass("col-md-pull-6");
+
+    } else if ( Author_Post_layOut == 5 ) {
+
+        $('.author-page #primary').removeClass('layout-one').addClass('layout-eight clearfix');
+        $('.author-page .post-layout-column').removeClass('col-md-10 col-md-offset-1');
+        var all_post = $('.author-page #main .col-md-4.col-sm-6.single-post.grid');
+        all_post.wrapAll("<div id='masonry-layout' class='ss'></div>");
+
+    }
+
+</script>
+

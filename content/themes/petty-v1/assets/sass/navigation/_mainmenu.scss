@@ -1,0 +1,250 @@
+#mobile-menu {
+    display: none;
+}
+.mainmenu {
+    position: relative;
+}
+.overlapblackbg {
+    display: none;
+}
+.menu-list {
+    @include unoder-list;     
+    > li {
+        position: relative;
+        float: left;
+        &:last-child {
+            > a {
+                padding-right: 0 !important;
+            }
+            &:after {
+                content: ""
+            }
+        }
+        &:after {
+            content: "/";
+            position: absolute;
+            right: 0;
+            top: 16px;
+        }
+    }
+}
+    
+.menu-list {
+    margin: auto;
+    padding: 0px;
+    list-style: none;
+    width: auto;
+    display: table;
+    > li > a {
+        display: block;
+        padding: 15px 46px;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: $font__spcial;
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+        vertical-align: middle;
+        @include prefixed(transform, translateZ(0));
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        @include prefixed(backface-visibility, hidden);
+        overflow: hidden;
+        white-space: nowrap;
+        span {
+            margin-left: 5px;
+        }
+    }
+    > li.current-menu-item,
+    > li.current-menu-ancestor {
+        > a:before {
+            @include prefixed(transform, translateY(0));
+        }
+    }       
+}
+.menu-click {
+    display: none;
+}
+
+.nav-center{ 
+    .menu-list {    
+        text-align: center;
+        display: table;
+        height: 100%;
+        margin: 0 auto;
+        width: auto;
+        > li {
+            display: table-cell;            
+            > a {
+                padding: 17px 35px;
+            }
+        }
+    }
+}
+
+/* Sub Menu CSS */
+.menu-submenu {
+    position: absolute;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    border: solid 1px $color__menu-border;
+    background-color: $color__white;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    font-family: $font__spcial;
+    font-weight: normal;
+    @include prefixed(backface-visibility, hidden);
+    @include prefixedallon(transform-origin, 0% 0%);
+    @include prefixed_double(transition, transform 0.3s, opacity 0.4s);
+    li {
+        position: relative;
+        a {
+            background: $color__white;
+            background-image: none !important;
+            color: #000;
+            border-right: 0 none !important;    
+            text-align: left;
+            display: block;
+            line-height: 1.5em;
+            padding: 8px 16px;
+            text-transform: capitalize;
+            font-size: 12px;
+            letter-spacing: normal; 
+            font-weight: normal;  
+        }
+        &:last-child a {
+            border-bottom: none;
+        }
+    }
+}
+.menu-submenu li a,
+.menu-submenu .menu-submenu li a {
+    border-bottom: 1px dashed $color__border-three;
+
+}
+.menu-submenu li:last-child > a {
+    border-bottom: 0;
+}
+.menuexpandermain {
+    display: none;
+}
+.menu-list {
+    filter: alpha(opacity=100);
+    filter: alpha(opacity=0);
+    .menu-submenu {
+       min-width: 200px; 
+    }
+    li:hover .menu-submenu,
+    .menu-submenu li:hover .menu-submenu {
+        display: block;
+    }
+    .menu-submenu .menu-submenu,
+    .menu-submenu .menu-submenu .menu-submenu {
+        min-width: 200px;
+        position: absolute;
+        left: 100%;
+        top: -1px;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        @include prefixedallon(transform-origin, 0% 0%);
+        @include prefixed_double(transition, transform 0.4s, opacity 0.4s);
+        z-index: 1001;
+    }
+    .menu-submenu li:hover .menu-submenu,
+    .menu-submenu .menu-submenu li:hover .menu-submenu {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        list-style: none;
+        background-color: $color__white;
+    }
+    .menu-submenu a span {
+        margin-top: 3px;
+        float: right;
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        vertical-align: middle;
+    }
+}
+.menu-submenu li {
+    position: relative;
+    display: block;
+}
+/*Animation*/
+.menu-list {
+    filter: alpha(opacity=100);
+    li {
+        filter: alpha(opacity=100);
+        > .menu-submenu {
+            @include prefixedallon(transform-style, preserve-3d);
+            @include prefixed(transform, rotateX(-90deg));
+            @include prefixed(backface-visibility, hidden);
+            visibility: hidden;
+        }
+        &:hover {
+            filter: alpha(opacity=100);
+            > .menu-submenu {
+                @include prefixed(backface-visibility, hidden);
+                @include prefixed(transform, rotateX(0deg));
+                opacity: 1;
+                filter: alpha(opacity=100);
+                visibility: visible;
+            }    
+        }
+    }
+}
+
+/* hover Color */
+.menu-list li a, .menu-submenu > li a {
+    -webkit-transition: all 0.15s ease 0s;
+            transition: all 0.15s ease 0s;
+}
+.menu-list li{
+     .menu-submenu > li:hover {                    
+        >a {
+            padding-left: 14px !important;
+            background-color: #fafafa !important;                
+            span {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.menu-submenu > li > a:hover,
+.menu-submenu .menu-submenu > li > a:hover,
+.menu-submenu .menu-submenu .menu-submenu > li > a:hover {
+    background-color: $color__footer-bg !important;
+    @include prefixed(border-radius, 0!important);
+    text-decoration: none;
+}
+.menu-submenu .fa {
+    margin-right: 7px;
+}
+#nav-right .menu-submenu .menu-submenu {
+    left: -100%;
+    margin-left: -2px;
+}
+
+#header-bottom {
+    #mobile-main-nav {
+        @media only screen and (min-width: 992px) {
+            display: none;
+        }
+    }
+}
+.menu-list > li > a {
+    color: $color__black;
+}
+.menu-list > li::after {
+    color: $color__border-three;
+}
+.menu-list li{
+    .menu-submenu > li:hover {                    
+        > a {
+            padding-left: 14px !important;
+        }
+    }
+}
