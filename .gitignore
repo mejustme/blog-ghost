@@ -8,6 +8,7 @@ b-cov
 *.gz
 content/data/*.db
 npm-debug.log
+
 !/content/themes/petty-v1
 !content/themes/petty-v1
 
