@@ -11,6 +11,7 @@ npm-debug.log
 
 content/themes/petty-v1/
 content/themes/petty-doc/
+content/images/
 
 node_modules/*
 !/node_modules/sqlite3
