@@ -7,11 +7,11 @@ var path = require('path'),
     config;
 
 config = {
-    // ###  Production
+    // ### Production
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://www.if-elseif-else/',
+        url: 'http://121.40.139.122/',
         mail: {},
         database: {
             client: 'sqlite3',
