@@ -8,6 +8,8 @@ var express,
 // Make sure dependencies are installed and file system permissions are correct.
 require('./core/server/utils/startup-check').check();
 
+console.log("当前环境process.env.NODE_ENV：" + process.env.NODE_ENV);
+
 // Proceed with startup
 express = require('express');
 ghost = require('./core');

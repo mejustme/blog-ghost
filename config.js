@@ -11,7 +11,8 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://www.if-elseif-else.com/',
+        // url: 'http://www.if-elseif-else.com/',
+        url: 'http://localhost:8080',
         mail: {},
         database: {
             client: 'sqlite3',
@@ -34,11 +35,21 @@ config = {
          debug: false
          },*/
 
+        // 线上
+        // server: {
+        //     // 必须为，标识任意请求都接受
+        //     host: '0.0.0.0',
+        //     // port: '2368',
+        //     port: '80'
+        // },
+
+        // 本地
         server: {
-            // 必须为，标识任意请求都接受
-            host: '0.0.0.0',
-            // port: '2368',
-            port: '80'
+            // Host to be passed to node's `net.Server#listen()`
+            host: '127.0.0.1',
+            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
+            //port: '2368'
+            port: '8080'
         },
 
         //Storage.Now,we can support `qiniu`,`upyun`, `aliyun oss`, `aliyun ace-storage` and `local-file-store`
@@ -109,7 +120,6 @@ config = {
             client: 'sqlite3',
             connection: {
                 filename: path.join(__dirname, '/content/data/ghost-dev.db')
-                // filename: path.join(__dirname, '/content/data/ghost.db')
             },
             debug: false
         },
