@@ -10,7 +10,6 @@ npm-debug.log
 
 content/themes/petty-v1/
 content/themes/petty-doc/
-content/images/
 
 node_modules/*
 # node_modules 安装太慢，本地直接上传上去
