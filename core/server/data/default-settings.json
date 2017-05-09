@@ -70,7 +70,7 @@
     },
     "theme": {
         "activeTheme": {
-            "defaultValue": "Petty"
+            "defaultValue": "petty"
         }
     },
     "app": {
