@@ -11,8 +11,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        // url: 'http://www.if-elseif-else.com/',
-        url: 'http://47.90.101.113/',
+        url: 'http://www.if-elseif-else.com/',
         mail: {},
         database: {
             client: 'sqlite3',
@@ -109,8 +108,8 @@ config = {
         database: {
             client: 'sqlite3',
             connection: {
-                // filename: path.join(__dirname, '/content/data/ghost-dev.db')
-                filename: path.join(__dirname, '/content/data/ghost.db')
+                filename: path.join(__dirname, '/content/data/ghost-dev.db')
+                // filename: path.join(__dirname, '/content/data/ghost.db')
             },
             debug: false
         },
