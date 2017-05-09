@@ -14,7 +14,9 @@ content/themes/petty-doc/
 content/images/
 
 node_modules/*
-# node_modules 安装太慢，本地直接上传上去 !/node_modules/sqlite3
+# node_modules 安装太慢，本地直接上传上去
+
+!/node_modules/sqlite3
 
 .idea/*
 
