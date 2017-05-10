@@ -11,8 +11,8 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        // url: 'http://www.if-elseif-else.com/',
-        url: 'http://localhost:8080',
+        url: 'http://www.if-elseif-else.com/',
+        // url: 'http://localhost:8080',
         mail: {},
         database: {
             client: 'sqlite3',
