@@ -97,7 +97,7 @@ config = {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blog's published URL.
         //url: 'http://localhost:2368',
-        url: 'http://localhost:8080',
+        url: 'http://localhost:8081',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
@@ -130,7 +130,7 @@ config = {
             host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             //port: '2368'
-            port: '8080'
+            port: '8081'
         },
         // #### Paths
         // Specify where your content directory lives
