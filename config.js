@@ -36,21 +36,21 @@ config = {
          },*/
 
         // 线上
-        // server: {
-        //     // 必须为，标识任意请求都接受
-        //     host: '0.0.0.0',
-        //     // port: '2368',
-        //     port: '80'
-        // },
+        server: {
+            // 必须为，标识任意请求都接受
+            host: '0.0.0.0',
+            // port: '2368',
+            port: '80'
+        },
 
         // 本地
-        server: {
-            // Host to be passed to node's `net.Server#listen()`
-            host: '127.0.0.1',
-            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            //port: '2368'
-            port: '8080'
-        },
+        // server: {
+        //     // Host to be passed to node's `net.Server#listen()`
+        //     host: '127.0.0.1',
+        //     // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
+        //     //port: '2368'
+        //     port: '8080'
+        // },
 
         //Storage.Now,we can support `qiniu`,`upyun`, `aliyun oss`, `aliyun ace-storage` and `local-file-store`
         storage: {
